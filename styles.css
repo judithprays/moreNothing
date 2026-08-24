@@ -1,0 +1,977 @@
+/* ========================================
+   FONTS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  background: #fff;
+  border-bottom: 1px solid #111;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  padding: 18px 24px;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+
+  font-size: 14px;
+  line-height: 1;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   GENERAL
+======================================== */
+
+.section {
+  min-height: 100vh;
+  padding: 120px 24px 100px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   BIO
+======================================== */
+
+.bio {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 32px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bio h1 {
+  max-width: 1000px;
+  margin: 0;
+
+  font-size: clamp(56px, 9vw, 140px);
+  line-height: 0.88;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+
+/* ========================================
+   YOU KNOW LINK
+======================================== */
+
+.you-know {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 60px;
+
+  color: #111;
+  text-decoration: none;
+
+  font-size: 20px;
+  line-height: 1;
+}
+
+.you-know span {
+  transition: transform 200ms ease;
+}
+
+.you-know:hover span {
+  transform: translateY(4px);
+}
+
+
+/* ========================================
+   MANAGER BADGE
+======================================== */
+
+.manager-badge {
+  position: absolute;
+  right: 6%;
+  bottom: 10%;
+
+  width: 190px;
+  height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: #e53935;
+  border-radius: 50%;
+
+  color: #fff;
+  text-align: center;
+
+  transform: rotate(6deg);
+}
+
+.badge-title {
+  margin-bottom: 10px;
+
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.badge-stars {
+  display: flex;
+  gap: 1px;
+
+  margin-bottom: 9px;
+
+  font-size: 21px;
+  line-height: 1;
+}
+
+.badge-stars span {
+  display: inline-block;
+  color: #fff;
+}
+
+.badge-stars .partial-star {
+  background: linear-gradient(
+    to right,
+    #fff 60%,
+    rgba(255, 255, 255, 0.3) 60%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-rating {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.badge-detail {
+  max-width: 140px;
+
+  font-size: 11px;
+  line-height: 1.25;
+  opacity: 0.95;
+}
+
+
+/* ========================================
+   PROOF
+======================================== */
+
+.proof {
+  min-height: 100vh;
+  padding-top: 160px;
+}
+
+.proof-intro {
+  max-width: 900px;
+  margin-bottom: 140px;
+}
+
+.proof-intro p {
+  margin: 0 0 10px;
+
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+/* ========================================
+   YOU KNOW
+======================================== */
+
+.you-know {
+    padding: 120px 0 160px;
+  }
+  
+  .you-know h2 {
+    margin: 0 0 64px;
+  
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+  }
+  
+  .you-know-list {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  
+  .you-know-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+  
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+  
+  .you-know-item .emoji {
+    flex: 0 0 36px;
+  
+    width: 36px;
+  
+    font-size: 50px;
+    line-height: 1.15;
+  }
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 700px) {
+  
+    .you-know {
+      padding: 80px 0 110px;
+    }
+  
+    .you-know h2 {
+      margin-bottom: 48px;
+    }
+  
+    .you-know-list {
+      gap: 28px;
+    }
+  
+    .you-know-item {
+      gap: 18px;
+  
+      font-size: 24px;
+    }
+  
+    .you-know-item .emoji {
+      flex-basis: 28px;
+      width: 28px;
+      font-size: 20px;
+    }
+  }
+//* ========================================
+   PRINCIPLES
+======================================== */
+
+.principles {
+    margin-top: 120px;
+  }
+  
+  .principle {
+    border-top: 1px solid #111;
+  }
+  
+  .principle:last-child {
+    border-bottom: 1px solid #111;
+  }
+  
+  
+  /* Toggle */
+  
+  .principle-toggle {
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 40px 1fr 30px;
+    align-items: center;
+    gap: 20px;
+  
+    padding: 30px 0;
+  
+    border: 0;
+    background: none;
+    color: inherit;
+  
+    font-family: inherit;
+    text-align: left;
+  
+    cursor: pointer;
+  }
+  
+  .principle-number {
+    font-size: 11px;
+    color: #666;
+  }
+  
+  .principle-title {
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  
+  .principle-icon {
+    font-size: 24px;
+    font-weight: 300;
+  
+    text-align: right;
+  
+    transition: transform 0.25s ease;
+  }
+  
+  .principle-toggle:hover .principle-title {
+    opacity: 0.55;
+  }
+  
+  .principle-toggle[aria-expanded="true"] .principle-icon {
+    transform: rotate(45deg);
+  }
+  
+  
+  /* Case study */
+  
+  .principle-case-study {
+    display: none;
+  
+    max-width: 720px;
+  
+    margin-left: 60px;
+    padding: 5px 0 65px;
+  }
+  
+  .principle-case-study.is-open {
+    display: block;
+  }
+  
+  
+  .case-study-section {
+    margin-bottom: 42px;
+  }
+  
+  .case-study-label {
+    margin-bottom: 12px;
+  
+    font-size: 10px;
+    line-height: 1;
+  
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  
+    color: #666;
+  }
+  
+  .case-study-section p {
+    margin: 0 0 18px;
+  
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+  }
+  
+  .case-study-section p:last-child {
+    margin-bottom: 0;
+  }
+  
+/* ========================================
+   PRINCIPLES HEADER
+======================================== */
+
+.principles {
+    margin-top: 160px;
+  }
+  
+  .principles-header {
+    margin-bottom: 70px;
+  }
+  
+  .principles-header span {
+    display: block;
+  
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+  }
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 700px) {
+  
+    .principles {
+      margin-top: 110px;
+    }
+  
+    .principles-header {
+      margin-bottom: 55px;
+    }
+  
+    .principles-header span {
+      font-size: 52px;
+    }
+  
+  }
+
+  
+  /* Intro */
+  
+  .principle-intro {
+    margin-bottom: 42px;
+  
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+  }
+  
+  .case-study-subtitle {
+    margin-bottom: 42px;
+  
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  
+  
+  /* Lists */
+  
+  .case-study-section ul {
+    margin: 18px 0 0;
+    padding-left: 20px;
+  }
+  
+  .case-study-section li {
+    margin-bottom: 9px;
+  
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+  /* Quotes */
+  
+  .principle-case-study blockquote {
+    margin: 28px 0;
+    padding-left: 24px;
+  
+    border-left: 2px solid #111;
+  
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+  }
+  
+  
+  /* Leadership principle */
+  
+  .leadership-principle {
+    margin-top: 55px;
+    padding-top: 28px;
+  
+    border-top: 1px solid #ccc;
+  }
+  
+  .leadership-principle p {
+    margin: 0;
+  
+    font-size: 19px;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 700px) {
+  
+    .principles {
+      margin-top: 80px;
+    }
+  
+    .principle-toggle {
+      grid-template-columns: 28px 1fr 24px;
+      gap: 14px;
+  
+      padding: 23px 0;
+    }
+  
+    .principle-number {
+      font-size: 9px;
+    }
+  
+    .principle-title {
+      font-size: 22px;
+      line-height: 1.1;
+    }
+  
+    .principle-icon {
+      font-size: 20px;
+    }
+  
+    .principle-case-study {
+      margin-left: 0;
+      padding: 0 0 45px;
+    }
+  
+    .case-study-section {
+      margin-bottom: 34px;
+    }
+  
+    .case-study-section p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  
+    .principle-intro {
+      font-size: 19px;
+    }
+  
+    .case-study-subtitle {
+      font-size: 21px;
+    }
+  
+    .case-study-section li {
+      font-size: 15px;
+    }
+  
+    .principle-case-study blockquote {
+      margin: 24px 0;
+      padding-left: 18px;
+  
+      font-size: 19px;
+    }
+  
+    .leadership-principle {
+      margin-top: 44px;
+      padding-top: 24px;
+    }
+  
+    .leadership-principle p {
+      font-size: 17px;
+    }
+  
+  }
+
+
+/* ========================================
+   CASE STUDY
+======================================== */
+
+.case-study {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  transition: grid-template-rows 400ms ease;
+}
+
+.case-study-inner {
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 80px minmax(0, 700px);
+
+  opacity: 0;
+
+  transition:
+    opacity 250ms ease,
+    padding-bottom 400ms ease;
+}
+
+.case-study-meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.case-study h3 {
+  margin: 0 0 24px;
+
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.case-study p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   OPEN STATE
+======================================== */
+
+.principle.open .case-study {
+  grid-template-rows: 1fr;
+}
+
+.principle.open .case-study-inner {
+  padding-bottom: 48px;
+  opacity: 1;
+}
+
+.principle.open .toggle {
+  transform: rotate(45deg);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .nav {
+    padding: 16px 20px;
+    gap: 20px;
+  }
+
+  .section {
+    padding: 100px 20px 70px;
+  }
+
+  .bio h1 {
+    font-size: clamp(52px, 15vw, 90px);
+  }
+
+  .you-know {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .manager-badge {
+    right: 20px;
+    bottom: 40px;
+
+    width: 140px;
+    height: 140px;
+
+    padding: 18px;
+  }
+
+  .badge-title {
+    font-size: 8px;
+  }
+
+  .badge-stars {
+    font-size: 16px;
+  }
+
+  .badge-rating {
+    font-size: 11px;
+  }
+
+  .badge-detail {
+    font-size: 9px;
+  }
+
+  .proof {
+    padding-top: 120px;
+  }
+
+  .proof-intro {
+    margin-bottom: 90px;
+  }
+
+  .proof-intro p {
+    font-size: 27px;
+  }
+
+  .receipts {
+    margin-left: 0;
+  }
+
+  .receipts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .receipt {
+    min-height: 180px;
+  }
+
+  .receipt-copy strong {
+    font-size: 15px;
+  }
+
+  .section-header {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 40px;
+  }
+
+  .principle-header {
+    grid-template-columns: 50px 1fr 24px;
+    padding: 22px 0;
+  }
+
+  .principle-title {
+    font-size: 25px;
+    line-height: 1.05;
+  }
+
+  .case-study-inner {
+    display: block;
+    padding-left: 50px;
+  }
+
+  .case-study-meta {
+    margin-bottom: 24px;
+  }
+
+  .case-study h3 {
+    font-size: 27px;
+  }
+
+  .case-study p {
+    font-size: 17px;
+  }
+}
+
+/* ========================================
+   RECEIPTS
+======================================== */
+
+.receipts {
+    max-width: 900px;
+    margin-left: auto;
+  }
+  
+  .receipts-header {
+    margin-bottom: 20px;
+  
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  
+  .receipts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  
+  
+  /* ========================================
+     RECEIPT
+  ======================================== */
+  
+  .receipt {
+    position: relative;
+  
+    aspect-ratio: 0.72;
+  
+    display: flex;
+    flex-direction: column;
+  
+    padding: 22px 18px;
+  
+    background: #eeeeee;
+  
+    font-family: "IBM Plex Mono", monospace;
+  
+    overflow: hidden;
+  
+    transition: transform 180ms ease;
+  }
+  
+  .receipt:hover {
+    transform: translateY(-4px);
+  }
+  
+  
+  /* ========================================
+     RECEIPT TITLE
+  ======================================== */
+  
+  .receipt-title {
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+  
+    border-bottom: 1px dashed #999;
+  
+    text-align: center;
+  
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  
+  
+  /* ========================================
+     ITEMIZED CONTENT
+  ======================================== */
+  
+  .receipt-items {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  
+  .receipt-row {
+    display: flex;
+    align-items: baseline;
+  
+    width: 100%;
+  
+    font-size: 9px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  
+  .receipt-row > span:first-child {
+    flex-shrink: 0;
+  }
+  
+  .receipt-row strong {
+    flex-shrink: 0;
+  
+    font-size: 10px;
+    font-weight: 600;
+  }
+  
+  
+  /* Dotted leader */
+  
+  .leaders {
+    flex: 1;
+  
+    min-width: 8px;
+    margin: 0 5px;
+  
+    border-bottom: 1px dotted #999;
+  }
+  
+  
+  /* ========================================
+     RECEIPT FOOTER
+  ======================================== */
+  
+  .receipt-footer {
+    margin-top: auto;
+    padding-top: 18px;
+  
+    border-top: 1px dashed #999;
+  
+    text-align: center;
+  
+    font-size: 8px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  
+    color: #666;
+  }
+  
+  
+  /* ========================================
+     RECEIPT EDGE
+  ======================================== */
+  
+  /* little torn-paper effect */
+  
+  .receipt::after {
+    content: "";
+  
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  
+    width: 100%;
+    height: 7px;
+  
+    background:
+      linear-gradient(
+        135deg,
+        transparent 4px,
+        #fff 4px
+      ) 0 0 / 8px 8px repeat-x;
+  }
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 800px) {
+  
+    .receipts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .receipt {
+      aspect-ratio: 0.72;
+    }
+  
+  }
+  
+  
+  @media (max-width: 500px) {
+  
+    .receipts-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .receipt {
+      aspect-ratio: 0.8;
+    }
+  
+  }
