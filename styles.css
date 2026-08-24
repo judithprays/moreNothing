@@ -74,34 +74,187 @@ body {
   margin: 0 auto;
 }
 
-
 /* ========================================
    BIO
 ======================================== */
 
 .bio {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.eyebrow {
-  margin: 0 0 32px;
-
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.bio h1 {
-  max-width: 1000px;
-  margin: 0;
-
-  font-size: clamp(56px, 9vw, 140px);
-  line-height: 0.88;
-  font-weight: 400;
-  letter-spacing: -0.055em;
-}
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .bio .content {
+    position: relative;
+    padding-top: 33vh;
+  }
+  
+  
+  /* ========================================
+     BIO TYPOGRAPHY
+  ======================================== */
+  
+  .bio .eyebrow {
+    margin: 0 0 24px;
+  
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .bio h1 {
+    margin: 0;
+  
+    max-width: 900px;
+  
+    font-size: clamp(64px, 8vw, 120px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+  }
+  
+  .bio .intro {
+    max-width: 620px;
+  
+    margin-top: 40px;
+  
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  
+  
+  /* ========================================
+     MANAGER BADGE
+  ======================================== */
+  
+  .manager-badge {
+    position: absolute;
+  
+    top: 8vh;
+    right: 8%;
+  
+    width: 145px;
+    height: 145px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 18px;
+  
+    border-radius: 50%;
+  
+    background: #d92d20;
+    color: white;
+  
+    text-align: center;
+  
+    transform: rotate(6deg);
+  }
+  
+  .badge-title {
+    margin-bottom: 8px;
+  
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  
+  .badge-stars {
+    margin-bottom: 7px;
+  
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+  
+  .badge-rating {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  .badge-detail {
+    margin-top: 4px;
+  
+    font-size: 9px;
+    line-height: 1.2;
+    opacity: 0.9;
+  }
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 700px) {
+  
+    .bio {
+      min-height: auto;
+    }
+  
+    .bio .content {
+      padding-top: 190px;
+    }
+  
+    .bio .eyebrow {
+      margin-bottom: 18px;
+  
+      font-size: 10px;
+    }
+  
+    .bio h1 {
+      font-size: 56px;
+      line-height: 0.92;
+    }
+  
+    .bio .intro {
+      margin-top: 30px;
+  
+      font-size: 17px;
+      line-height: 1.5;
+    }
+  
+  
+    /* Badge */
+  
+    .manager-badge {
+      top: 35px;
+      right: 25px;
+  
+      width: 120px;
+      height: 120px;
+  
+      padding: 15px;
+    }
+  
+    .badge-title {
+      margin-bottom: 7px;
+  
+      font-size: 9px;
+    }
+  
+    .badge-stars {
+      margin-bottom: 6px;
+  
+      font-size: 15px;
+    }
+  
+    .badge-rating {
+      font-size: 10px;
+    }
+  
+    .badge-detail {
+      margin-top: 3px;
+  
+      font-size: 8px;
+    }
+  
+  }
 
 
 /* ========================================
@@ -130,87 +283,187 @@ body {
   transform: translateY(4px);
 }
 
-
 /* ========================================
-   MANAGER BADGE
+   BIO
 ======================================== */
 
-.manager-badge {
-  position: absolute;
-  right: 6%;
-  bottom: 10%;
-
-  width: 190px;
-  height: 190px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px;
-
-  background: #e53935;
-  border-radius: 50%;
-
-  color: #fff;
-  text-align: center;
-
-  transform: rotate(6deg);
-}
-
-.badge-title {
-  margin-bottom: 10px;
-
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-
-.badge-stars {
-  display: flex;
-  gap: 1px;
-
-  margin-bottom: 9px;
-
-  font-size: 21px;
-  line-height: 1;
-}
-
-.badge-stars span {
-  display: inline-block;
-  color: #fff;
-}
-
-.badge-stars .partial-star {
-  background: linear-gradient(
-    to right,
-    #fff 60%,
-    rgba(255, 255, 255, 0.3) 60%
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.badge-rating {
-  margin-bottom: 6px;
-
-  font-size: 14px;
-  line-height: 1.1;
-  font-weight: 600;
-}
-
-.badge-detail {
-  max-width: 140px;
-
-  font-size: 11px;
-  line-height: 1.25;
-  opacity: 0.95;
-}
-
+.bio {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .bio .content {
+    position: relative;
+    padding-top: 33vh;
+  }
+  
+  
+  /* ========================================
+     BIO TYPOGRAPHY
+  ======================================== */
+  
+  .bio .eyebrow {
+    margin: 0 0 24px;
+  
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .bio h1 {
+    margin: 0;
+  
+    max-width: 900px;
+  
+    font-size: clamp(64px, 8vw, 120px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+  }
+  
+  .bio .intro {
+    max-width: 620px;
+  
+    margin-top: 40px;
+  
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  
+  
+  /* ========================================
+     MANAGER BADGE
+  ======================================== */
+  
+  .manager-badge {
+    position: absolute;
+  
+    top: 8vh;
+    right: 8%;
+  
+    width: 145px;
+    height: 145px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 18px;
+  
+    border-radius: 50%;
+  
+    background: #d92d20;
+    color: white;
+  
+    text-align: center;
+  
+    transform: rotate(6deg);
+  }
+  
+  .badge-title {
+    margin-bottom: 8px;
+  
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  
+  .badge-stars {
+    margin-bottom: 7px;
+  
+    font-size: 17px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+  
+  .badge-rating {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  .badge-detail {
+    margin-top: 4px;
+  
+    font-size: 9px;
+    line-height: 1.2;
+    opacity: 0.9;
+  }
+  
+  
+  /* ========================================
+     MOBILE
+  ======================================== */
+  
+  @media (max-width: 700px) {
+  
+    .bio {
+      min-height: auto;
+    }
+  
+    .bio .content {
+      padding-top: 190px;
+    }
+  
+    .bio .eyebrow {
+      margin-bottom: 18px;
+  
+      font-size: 10px;
+    }
+  
+    .bio h1 {
+      font-size: 56px;
+      line-height: 0.92;
+    }
+  
+    .bio .intro {
+      margin-top: 30px;
+  
+      font-size: 17px;
+      line-height: 1.5;
+    }
+  
+  
+    /* Badge */
+  
+    .manager-badge {
+      top: 35px;
+      right: 25px;
+  
+      width: 120px;
+      height: 120px;
+  
+      padding: 15px;
+    }
+  
+    .badge-title {
+      margin-bottom: 7px;
+  
+      font-size: 9px;
+    }
+  
+    .badge-stars {
+      margin-bottom: 6px;
+  
+      font-size: 15px;
+    }
+  
+    .badge-rating {
+      font-size: 10px;
+    }
+  
+    .badge-detail {
+      margin-top: 3px;
+  
+      font-size: 8px;
+    }
+  
+  }
 
 /* ========================================
    PROOF
