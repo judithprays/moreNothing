@@ -568,37 +568,32 @@ body {
     margin-top: 120px;
   }
   
-  .principle {
-    border-top: 1px solid #111;
-  }
-  
-  .principle:last-child {
-    border-bottom: 1px solid #111;
-  }
-  
-  
-  /* Toggle */
-  
-  .principle-toggle {
-    width: 100%;
-  
-    display: grid;
-    grid-template-columns: 40px 1fr 30px;
-    align-items: center;
-    gap: 20px;
-  
-    padding: 30px 0;
-  
-    border: 0;
-    background: none;
-    color: inherit;
-  
-    font-family: inherit;
-    text-align: left;
-  
-    cursor: pointer;
-  }
-  
+.principle {
+  border: 0;
+}
+
+.principle-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40px 1fr 30px;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+
+  border: 0;
+  border-top: 1px solid #111;
+  border-radius: 0;
+
+  background: none;
+  color: inherit;
+
+  font-family: inherit;
+  font-weight: 400;
+  text-align: left;
+
+  cursor: pointer;
+}
+
   .principle-number {
     font-size: 11px;
     color: #666;
