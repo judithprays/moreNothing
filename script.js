@@ -22,6 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   
     });
+
+    /* OFFERING TOGGLES */
+
+document.querySelectorAll(".offering-toggle").forEach((button) => {
+  button.onclick = function () {
+    const content = this.parentElement.querySelector(".offering-content");
+
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      this.setAttribute("aria-expanded", "false");
+    } else {
+      content.style.display = "block";
+      this.setAttribute("aria-expanded", "true");
+    }
+  };
+});
   
   
     /* ========================================
